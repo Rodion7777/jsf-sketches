@@ -1,0 +1,39 @@
+<facelet-taglib version="2.2"
+                xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facelettaglibrary_2_2.xsd">
+
+    <namespace>http://example.com/local-datetime-converter</namespace>
+    <tag>
+        <tag-name>convertLocalDate</tag-name>
+        <converter>
+            <converter-id>com.example.local-datetime-converter</converter-id>
+        </converter>
+        <attribute>
+            <description>
+                Custom formatting pattern which determines how the
+                date/time string should be formatted and parsed.
+            </description>
+            <name>pattern</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <description>
+                Specifies what contents the string value will be
+                formatted to include, or parsed expecting. Valid
+                values are "date", "time", and "both". Default
+                value is "date".
+            </description>
+            <name>type</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <description>
+                A ValueExpression that evaluates to an instance of
+                com.example.converter.LocalDateTimeConverter.
+            </description>
+            <name>binding</name>
+            <type>com.example.converter.LocalDateTimeConverter</type>
+        </attribute>
+    </tag>
+</facelet-taglib>
